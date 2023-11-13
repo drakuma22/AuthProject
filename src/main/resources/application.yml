@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/newdb
+    username: root
+    password: password
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl.auto: update
+
+application:
+  security:
+    jwt:
+      secret-key: e8efe83fe051bd73040ec906653caf95099e4e138191b559ac8aa2fc51c42384
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
